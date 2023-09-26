@@ -1,6 +1,6 @@
 
 
-# Arch Music Bot <img src="https://img.shields.io/github/v/release/ArchBots/ArchMusic?color=green&logo=github&logoColor=red&style=social" alt="RELEASE">
+# Rdx Music Bot <img src="https://img.shields.io/github/v/release/NOBITA-RDX/RDX-MUSICN?color=green&logo=github&logoColor=red&style=social" alt="RELEASE">
 
 <img src="https://telegra.ph/file/3e72df6ef787df25f008e.jpg" align="middle" width="200" height="200"/>
 
@@ -67,18 +67,18 @@
 
 ## Deploy On Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Koch-Dev/Dooker)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/NOBITA-RDX/RDX-MUSICN)
 
 
 ## 🏷 Support
 
 For any questions or assistance, feel free to reach out:
 
-- Contact options listed on [this GitHub profile](https://github.com/ArchBots).
-- **Telegram Channel:** [ArchBots](https://t.me/ArchBots)
-- **Telegram Support Group:** [ARCH_SUPPORTS](https://t.me/ARCH_SUPPORTS)
+- Contact options listed on [this GitHub profile](https://github.com/NOBITA-RDX).
+- **Telegram Channel:** [ʀᴅx ʙᴏᴛᴢ](https://t.me/BTZ10R)
+- **Telegram Support Group:** [ʀᴅx sᴜᴘᴘᴏʀᴛ](https://t.me/+xWcg-WBN1oBjMjk1)
 
-Made with ❤️ by [**SAKIL**](https://t.me/YO_UR_OFFICIAL_CRUSH)
+Made with ❤️ by [**𝙍𝘿𝙓**](https://t.me/RAJDAUSAARDX)
 
 Developed by:
 **credit**
