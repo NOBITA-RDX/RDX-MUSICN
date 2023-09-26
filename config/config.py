@@ -70,7 +70,7 @@ UPSTREAM_REPO = getenv(
 
     "UPSTREAM_REPO",
 
-    "https://github.com/ArchBots/ArchMusic",
+    "https://github.com/NOBITA-RDX/RDX-MUSICN",
 
 )
 
@@ -84,11 +84,11 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv(
 
-    "SUPPORT_CHANNEL", None) # Example:- https://t.me/ArchBots
+    "SUPPORT_CHANNEL", None) # Example:- https://t.me/BTZ10R
 
 SUPPORT_GROUP = getenv(
 
-    "SUPPORT_GROUP", None)  # Example:- https://t.me/ARCH_SUPPORTS
+    "SUPPORT_GROUP", None)  # Example:- https://t.me/+xWcg-WBN1oBjMjk1
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 
