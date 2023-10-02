@@ -3,19 +3,26 @@ import random
 from pyrogram.types import InlineKeyboardButton
 
 selection = [
-    "▁▄▂▇▄▅▄▅▃",
-    "▁▃▇▂▅▇▄▅▃",
-    "▃▁▇▂▅▃▄▃▅",
-    "▃▄▂▄▇▅▃▅▁",
-    "▁▃▄▂▇▃▄▅▃",
-    "▃▁▄▂▅▃▇▃▅",
-    "▁▇▄▂▅▄▅▃▄",
-    "▁▃▅▇▂▅▄▃▇",
-    "▃▅▂▅▇▁▄▃▁",
-    "▇▅▂▅▃▄▃▁▃",
-    "▃▇▂▅▁▅▄▃▁",
-    "▅▄▇▂▅▂▄▇▁",
-    "▃▅▂▅▃▇▄▅▃",
+    if 0 < anon <= 10:
+        bar = "♪━━━━━━━━━"
+    elif 10 < anon < 20:
+        bar = "━♪━━━━━━━━"
+    elif 20 <= anon < 30:
+        bar = "━━♪━━━━━━━"
+    elif 30 <= anon < 40:
+        bar = "━━━♪━━━━━━"
+    elif 40 <= anon < 50:
+        bar = "━━━━♪━━━━━"
+    elif 50 <= anon < 60:
+        bar = "━━━━━♪━━━━"
+    elif 60 <= anon < 70:
+        bar = "━━━━━━♪━━━"
+    elif 70 <= anon < 80:
+        bar = "━━━━━━━♪━━"
+    elif 80 <= anon < 95:
+        bar = "━━━━━━━━♪━"
+    else:
+        bar = "━━━━━━━━━♪",
 ]
 
 def time_to_sec(time: str):
@@ -119,17 +126,20 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["PL_B_2"],
-                callback_data=f"add_playlist {videoid}",
+                text="˹sᴏᴜʀᴄᴇ˼", url="https://t.me/+m4oVCt2zFhYyMTdl"
             ),
             InlineKeyboardButton(
-                text=_["PL_B_3"],
+                text="˹ᴘᴀɴᴇʟ˼",
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
         ],
         [
+            InlineKeyboardButton(
+                text="𓆩💜𓆪", url="https://t.me/+xWcg-WBN1oBjMjk1")
              InlineKeyboardButton(
-                text=_["CLOSEMENU_BUTTON"], callback_data="close"
+                text="𓆩🖤𓆪", user_id="1777270311")
+        InlineKeyboardButton(
+                text="𓆩💙𓆪", url="https://youtube.com/@LofiBoyraj",
             )
         ],
     ]
@@ -205,11 +215,34 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["P_B_3"],
+                text="˹ʟɪᴠᴇ˼",
                 callback_data=f"LiveStream {videoid}|{user_id}|{mode}|{channel}|{fplay}",
             ),
+        ],
+        [
             InlineKeyboardButton(
-                text=_["CLOSEMENU_BUTTON"],
+                text="˹sᴜᴘᴘᴏʀᴛ˼", url="https://t.me/+xWcg-WBN1oBjMjk1",
+            ),
+            InlineKeyboardButton(
+                text="˹ᴄʜᴀɴɴᴇʟ˼", url="https://t.me/+m4oVCt2zFhYyMTdl",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="˹ᴘʟᴀʏʟɪsᴛ˼", callback_data=f"add_playlist {videoid}",
+                ),
+            InlineKeyboardButton(
+                text="˹ᴏᴡɴᴇʀ˼", user_id="1777270311",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="˹ʏᴏᴜᴛᴜʙᴇ˼", url="https://youtube.com/@LofiBoyraj",
+             ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="˹ᴄʟᴏsᴇ˼",
                 callback_data=f"forceclose {videoid}|{user_id}",
             ),
         ],
@@ -260,33 +293,36 @@ def panel_markup_1(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="⏸ Pause", callback_data=f"ADMIN Pause|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="▶️ Resume",
+                text="▷",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
+            InlineKeyboardButton(
+                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="☆", callback_data=f"add_playlist {videoid}"
+            ),
+            InlineKeyboardButton(
+                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+            ),
         ],
         [
             InlineKeyboardButton(
-                text="⏯ Skip", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="⏹ Stop", callback_data=f"ADMIN Stop|{chat_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="◀️",
+                text="◃◃",
                 callback_data=f"Pages Back|0|{videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="🔙 Back",
-                callback_data=f"MainMarkup {videoid}|{chat_id}",
+                text="𓆩🖤𓆪", user_id="1777270311",
             ),
             InlineKeyboardButton(
-                text="▶️",
+                text="▹▹",
                 callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="˹sᴜᴘᴘᴏʀᴛ˼", url="https://t.me/+xWcg-WBN1oBjMjk1"
             ),
         ],
     ]
@@ -297,34 +333,36 @@ def panel_markup_2(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🔇 Mute", callback_data=f"ADMIN Mute|{chat_id}"
+                text="˹ᴍᴜᴛᴇ˼", callback_data=f"ADMIN Mute|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="🔊 Unmute",
+                text="˹ᴜɴᴍᴜᴛᴇ˼",
                 callback_data=f"ADMIN Unmute|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🔀 Shuffle",
+                text="˹sʜᴜғғʟᴇ˼",
                 callback_data=f"ADMIN Shuffle|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="🔁 Loop", callback_data=f"ADMIN Loop|{chat_id}"
+                text="˹ʟᴏᴏᴘ˼", callback_data=f"ADMIN Loop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="◀️",
+                text="◃◃",
                 callback_data=f"Pages Back|1|{videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="🔙 Back",
-                callback_data=f"MainMarkup {videoid}|{chat_id}",
+                text="𓆩🖤𓆪", user_id="1777270311",
             ),
             InlineKeyboardButton(
-                text="▶️",
+                text="▹▹",
                 callback_data=f"Pages Forw|1|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="˹sᴜᴘᴘᴏʀᴛ˼", url="https://t.me/+xWcg-WBN1oBjMjk1"
             ),
         ],
     ]
@@ -335,36 +373,38 @@ def panel_markup_3(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="⏮ 10 Seconds",
+                text="˹◃◃10˼",
                 callback_data=f"ADMIN 1|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⏭ 10 Seconds",
+                text="˹10▹▹˼",
                 callback_data=f"ADMIN 2|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⏮ 30 Seconds",
+                text="˹◃◃30˼",
                 callback_data=f"ADMIN 3|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⏭ 30 Seconds",
+                text="˹30▹▹˼",
                 callback_data=f"ADMIN 4|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="◀️",
+                text="◃◃",
                 callback_data=f"Pages Back|2|{videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="🔙 Back",
-                callback_data=f"MainMarkup {videoid}|{chat_id}",
+                text="𓆩🖤𓆪", user_id="1777270311",
             ),
             InlineKeyboardButton(
-                text="▶️",
+                text="▹▹",
                 callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="˹sᴜᴘᴘᴏʀᴛ˼", url="https://t.me/+xWcg-WBN1oBjMjk1"
             ),
         ],
     ]
